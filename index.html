@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Happy Birthday</title>
-    <meta name="author" content="17174" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     
-    
-  </head>
-  <body>
-    <div id="game">
-      <canvas id="mainCanvas" width="256" height="224">No Canvas Support</canvas>
-    </div>
-    <div> 
-      Arrowkey to move.
-      Enter to Start
-      Z to interact
-    </div>
-    <div id="controller">
-      <div id="controller_dpad">
-        <div id="controller_left"></div>
-        <div id="controller_right"></div>
-        <div id="controller_up"></div>
-        <div id="controller_down"></div>
-      </div>
-      <div id="controller_select" class="capsuleBtn">Select</div>
-      <div id="controller_start" class="capsuleBtn">Start</div>
-      <div id="controller_b" class="roundBtn">B</div>
-      <div id="controller_a" class="roundBtn">A</div>
-    </div>      
-    <script>
-      const customControls = {}
-    </script>
-    <script src="binjgb.js"></script>
-    <script src="js/script.js"></script>
 </body>
+<script>
+    /* Make the html background color pink */
+document.body.style.backgroundColor = 'pink';
+/* add in a balloon image with the width of 24% and height of 100% of the html. On the left side */
+var balloon = document.createElement('img');
+balloon.src = 'image/balloon.gif';
+balloon.style.width = '30%';
+balloon.style.height = '100%';
+balloon.style.position = 'absolute';
+balloon.style.left = '0';
+document.body.appendChild(balloon);
+/* make balloon on the top */
+balloon.style.top = '0';
+/* make a another balloon image but on the right */
+var balloon2 = document.createElement('img');
+balloon2.src = 'image/balloon.gif';
+balloon2.style.width = '30%';
+balloon2.style.height = '100%';
+balloon2.style.position = 'absolute';
+balloon2.style.right = '0';
+document.body.appendChild(balloon2);
+/* make balloon2 on top */
+balloon2.style.top = '0';
+balloon2.style.transform = 'scaleX(-1)';
+/* make a cake image in the middle. have the width of 40% and height to correspond to the width size. */
+var cake = document.createElement('img');
+cake.src = 'image/cake.gif';
+cake.style.width = '40%';
+cake.style.height = 'auto';
+cake.style.position = 'absolute';
+cake.style.left = '30%';
+document.body.appendChild(cake);
+/* make the cake on the bottom */
+cake.style.bottom = '0';
+/* Have a huge Bold text in the middle. have the same width of the cake and it height to 50%. It said Happy Birthday MAMA */
+var text = document.createElement('div');
+text.innerHTML = 'Happy Birthday MAMA';
+text.style.fontSize = '50px';
+text.style.fontWeight = 'bold';
+text.style.position = 'absolute';
+text.style.left = '30%';
+text.style.width = '40%';
+text.style.height = '50%';
+document.body.appendChild(text);
+/* make a image in the center */
+// var center = document.createElement('img');
+// center.src = 'https://i.imgur.com/aKIhy3G.gif';
+// center.style.width = '40%';
+// center.style.height = 'auto';
+// center.style.position = 'absolute';
+// center.style.left = '30%';
+// document.body.appendChild(center);
+// /* have center on top of the cake */
+// center.style.bottom = '50%';
+cake.onclick = function() {
+  window.location.href = 'game.html';
+};
+</script>
+</html>
